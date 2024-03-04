@@ -47,12 +47,11 @@ def restart():
         print (f"""{Fore.GREEN} Restarting...\n {Style.RESET_ALL}""")
         time.sleep(0.5)
         clear_screen()
-        print_menu()
+        start_game()
     elif restart.upper() =='N':
         clear_screen()
         print(f"""{Fore.GREEN}Goodbye{Style.RESET_ALL}""")
         exit()
-
 
 """
 Randomly choose word from list.
@@ -99,11 +98,10 @@ def start_game():
                 Takes away a life if letter is not in the word.
                 """
                 lives = lives - 1  
-                print('\n Sorry but your chosen letter,', user_letter, 'is not in the word.')
+                print('Sorry but your chosen letter,', user_letter, 'is not in the word.\n')
+               
         elif user_letter in used_letters:
             print(f"""\n Oops you have already used that letter. Have another guess.""")
-    
-
         else:
             print(f""" \n {Fore.RED} Sorry but that is not a valid letter.{Style.RESET_ALL}""")
 
@@ -181,7 +179,7 @@ def option2(user_name):
 def option3(user_name):
     clear_screen()
     print(f"""{Fore.MAGENTA}Thanks for playing !!{Style.RESET_ALL}""")
-    print(f"""{Fore.MAGENTA}Goodbye,  " +    user_name {Style.RESET_ALL}""")
+    print("Goodbye, " +    user_name )
 
 
 def rules(user_name):
@@ -197,7 +195,7 @@ def rules(user_name):
     * If you lose all 7 lives, the game will end.
     * You cannot exit the game once it begins.
         {Style.RESET_ALL} """)
-    input('Hit enter to go back to the menu. \n') 
+    input(f"""Hit enter to go back to the menu. \n""") 
     clear_screen() 
     sleep(1)
     print_menu(user_name)
