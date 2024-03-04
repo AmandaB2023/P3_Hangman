@@ -1,22 +1,23 @@
 import random
 import string
 import os
-from time import sleep
 import time
+from time import sleep
 from colorama import Fore, Style
 from words import words
 from hangman_visual import hangman_visual_dict
 from welcome import logo
 
+
 """
 Prints logo
 """
 def hello():
-    print(f"""{Fore.GREEN }logo""")
-   
+    print(logo)
+
 
 """
-Clear's function to clean-up the terminal.
+Clear function to clean-up the terminal.
 """
 def clear_screen():
     os.system("cls" if os.name == "nt" else "clear")
@@ -63,8 +64,8 @@ def get_valid_word(words):
     return word.upper()
 
 """
-Start game , set number of letter in word 
-and check what letters the user has gussed.
+Start game , set number of letters in word 
+and check what letters the user has guessed.
 """ 
 def start_game():
     word = get_valid_word(words)
@@ -74,30 +75,37 @@ def start_game():
 
     lives = 7
 
-    # get the users letter input
+    """ 
+    Get the users letter input.
+    """
     while len(word_letters) > 0 and lives > 0 : 
         # letters used
         print('You have', lives, 'lives left and you have used these letters: ', ' '.join(used_letters))
-        # the  current word is (ie W - R D)
+        """
+        The  current word is (ie. W - R D)
+        """
         word_list = [letter if letter in used_letters else '-' for letter in word]
         print(hangman_visual_dict[lives])
         print('Your current word is : ', ' '.join(word_list))
 
-        user_letter = input('Select a letter: ').upper()
+        user_letter = input('Please select a letter: ').upper()
         if user_letter in alphabet - used_letters:
             used_letters.add(user_letter)
             if user_letter in word_letters:
                 word_letters.remove(user_letter)
                 print('')
             else:
-                lives = lives - 1  # takes away a life if letter is not in word
-                print('\n Your letter,', user_letter, 'is not in the word.')
+                """
+                Takes away a life if letter is not in the word.
+                """
+                lives = lives - 1  
+                print('\n Sorry but your chosen letter,', user_letter, 'is not in the word.')
         elif user_letter in used_letters:
             print(f"""\n Oops you have already used that letter. Have another guess.""")
     
 
         else:
-            print(f""" \n Sorry but that is not a valid letter.""")
+            print(f""" \n {Fore.RED} Sorry but that is not a valid letter.{Style.RESET_ALL}""")
 
     """
     Game ends when letter == 0 OR when lives == 0 OR user guesses the correct word.
@@ -108,6 +116,7 @@ def start_game():
         time.sleep(2)
         start_game()
     else:
+        clear_screen()
         print('YAY! You guessed the word', word, '!!')
         print('')
         print(f"""{Fore.CYAN} CONGRATULATIONS!!!{Style.RESET_ALL}""")
@@ -125,13 +134,13 @@ game_options = {
 }
 
 def print_menu(user_name):
-    print(f"""{Fore.GREEN}Please select one of the following options by typing the corresonding number and hitting enter.{Style.RESET_ALL}""")
+    print(f"""{Fore.GREEN}Please select one of the following options by typing the cooresponding number and hitting Enter.{Style.RESET_ALL}""")
     for key in game_options.keys():
         print (key, '--', game_options[key] )
     while(True):
         option = ''
         try:
-            option = int(input('Enter your selected menu option here :    '))
+            option = int(input('Please enter your selected menu option here :    '))
         except:
             print(f"""{Fore.RED}Incorrect input type.{Style.RESET_ALL}""")
 
@@ -160,7 +169,7 @@ def print_menu(user_name):
 def option1():
     clear_screen()
     time.sleep(1)
-    print (f"""{Fore.GREEN}Lets Play...\n {Style.RESET_ALL}""")
+    print (f"""{Fore.GREEN}Lets Play.....\n {Style.RESET_ALL}""")
     time.sleep(0.5)
 
 
@@ -181,14 +190,14 @@ def rules(user_name):
     Game rules and how to play.
     """
     print(f"""{Fore.BLUE}
-    * Try to save the hangman by guessing the word.
-    * Guess  a single letter at a time untill you find the word.
-    * You will have 7 lives .
-    * If you guess wrong, you will lose a life.
-    * if you loose all 7 lives the game will end.
+    * Try to save the hangman by guessing the  random word.
+    * Guess a single letter at a time until you find the corrrect word.
+    * You will have 7 lives.
+    * If you guess an incorrect letter, you will lose a life.
+    * If you lose all 7 lives, the game will end.
     * You cannot exit the game once it begins.
         {Style.RESET_ALL} """)
-    input('Hit any key and press enter to go back to the nenu. \n') 
+    input('Hit enter to go back to the menu. \n') 
     clear_screen() 
     sleep(1)
     print_menu(user_name)
