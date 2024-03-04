@@ -13,7 +13,7 @@ from welcome import logo
 Prints logo
 """
 def hello():
-    print(logo)
+    print(Fore.GREEN + r""" logo""")
 
 
 """
