@@ -6,6 +6,7 @@ hangman_visual_dict = {
                |          |
                |         / \\
                |
+
                H A N G M A N !!
            """,
         1: """
@@ -15,6 +16,7 @@ hangman_visual_dict = {
                |          |
                |         / 
                |
+
                 H A N G M A _
             """,
         2: """
@@ -24,6 +26,7 @@ hangman_visual_dict = {
                |          |
                |          
                |
+
                H A N G M _ _
             """,
         3: """
@@ -33,6 +36,7 @@ hangman_visual_dict = {
                |          
                |          
                |
+
                H A N G _ _ _
             """,
         4: """
@@ -42,6 +46,7 @@ hangman_visual_dict = {
                |          
                |          
                |
+
                H A N _ _ _ _
             """,
         5: """
@@ -51,6 +56,7 @@ hangman_visual_dict = {
                |          
                |          
                |
+
                H A _ _ _ _ _
             """,
         6: """
@@ -59,6 +65,7 @@ hangman_visual_dict = {
                |
                |
                |
+               
                H _ _ _ _ _ _
             """,
         7:"""

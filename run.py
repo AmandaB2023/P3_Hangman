@@ -12,7 +12,8 @@ from welcome import logo
 Prints logo
 """
 def hello():
-    print(logo)
+    print(f"""{Fore.GREEN }logo""")
+   
 
 """
 Clear's function to clean-up the terminal.
@@ -24,11 +25,11 @@ def clear_screen():
 def get_user_name():
     name = ''
     while True:
-        name = input ("What is your name ?\n").capitalize()
+        name = input (f"""{Fore.GREEN }"What is your name ?\n{Style.RESET_ALL}""").capitalize()
         if name.isalpha() == True:
             print('')
             clear_screen()
-            print(f"""{Fore.YELLOW }Hello, " + name {Style.RESET_ALL}""")
+            print("Hello, " + name)
             break
         else:     
             print(f"""{Fore.RED}Please enter your name using letters only!{Style.RESET_ALL}""")
@@ -37,18 +38,18 @@ def get_user_name():
 
 def restart():
     clear_screen()
-    print('Would you like to play again ?')
+    print(f"""{Fore.GREEN} Would you like to play again ?{Style.RESET_ALL}""")
     restart = input('Yes / No(Y/N)\n')
     if restart.upper() == 'Y':
         clear_screen()
         time.sleep(1)
-        print ("Restarting...\n")
+        print (f"""{Fore.GREEN} Restarting...\n {Style.RESET_ALL}""")
         time.sleep(0.5)
         clear_screen()
         print_menu()
     elif restart.upper() =='N':
         clear_screen()
-        print('Goodbye')
+        print(f"""{Fore.GREEN}Goodbye{Style.RESET_ALL}""")
         exit()
 
 
@@ -109,20 +110,22 @@ def start_game():
     else:
         print('YAY! You guessed the word', word, '!!')
         print('')
-        print('CONGRATULATIONS!!!')
+        print(f"""{Fore.CYAN} CONGRATULATIONS!!!{Style.RESET_ALL}""")
         time.sleep(2)
         clear_screen()
         restart()
 
 
 game_options = {
+
     1: 'Play game ',
     2: 'Rules',
     3: 'Exit' ,
+    
 }
 
 def print_menu(user_name):
-    print(f"""Please select one of the following options by typing the corresonding number and hitting enter""")
+    print(f"""{Fore.GREEN}Please select one of the following options by typing the corresonding number and hitting enter.{Style.RESET_ALL}""")
     for key in game_options.keys():
         print (key, '--', game_options[key] )
     while(True):
@@ -130,7 +133,9 @@ def print_menu(user_name):
         try:
             option = int(input('Enter your selected menu option here :    '))
         except:
-            print('Incorrect input type.')
+            print(f"""{Fore.RED}Incorrect input type.{Style.RESET_ALL}""")
+
+
         """
         Check what option was entered by the user.
         """ 
@@ -144,10 +149,10 @@ def print_menu(user_name):
             option3(user_name)
             exit()
         else:
-            print("Checking what option you have choosen...")
+            print(f"""{Fore.GREEN}Checking what option you have choosen...{Style.RESET_ALL}""")
             sleep(2)
             clear_screen()
-            print(f"""Sorry that option was invalid. Please enter a number between 1 and 3.""")
+            print(f"""{Fore.RED}Sorry that option was invalid. Please enter a number between 1 and 3.{Style.RESET_ALL}""")
             print_menu(user_name)
             
 
@@ -155,19 +160,19 @@ def print_menu(user_name):
 def option1():
     clear_screen()
     time.sleep(1)
-    print ("Lets Play...\n")
+    print (f"""{Fore.GREEN}Lets Play...\n {Style.RESET_ALL}""")
     time.sleep(0.5)
 
 
 def option2(user_name):
     clear_screen()
-    print('The Rules ')
+    print(f"""{Fore.BLUE}The Rules {Style.RESET_ALL}""")
 
 
 def option3(user_name):
     clear_screen()
-    print('Thanks for playing !!')
-    print("Goodbye,  " +    user_name)
+    print(f"""{Fore.MAGENTA}Thanks for playing !!{Style.RESET_ALL}""")
+    print(f"""{Fore.MAGENTA}Goodbye,  " +    user_name {Style.RESET_ALL}""")
 
 
 def rules(user_name):
@@ -175,14 +180,14 @@ def rules(user_name):
     """
     Game rules and how to play.
     """
-    print(f"""
+    print(f"""{Fore.BLUE}
     * Try to save the hangman by guessing the word.
     * Guess  a single letter at a time untill you find the word.
     * You will have 7 lives .
     * If you guess wrong, you will lose a life.
     * if you loose all 7 lives the game will end.
     * You cannot exit the game once it begins.
-        """)
+        {Style.RESET_ALL} """)
     input('Hit any key and press enter to go back to the nenu. \n') 
     clear_screen() 
     sleep(1)
