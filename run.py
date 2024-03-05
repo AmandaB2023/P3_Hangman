@@ -7,7 +7,7 @@ from time import sleep
 from colorama import Fore, Style
 from words import words
 from hangman_visual import hangman_visual_dict
-from welcome import logo
+
 
 
 """S
@@ -122,8 +122,6 @@ def start_game():
         clear_screen()
         print('YAY! You guessed the word', word, '!!')
         print('')
-        tprint ("CONGRADULATIONS")
-        print()
         print(f"""{Fore.CYAN} CONGRATULATIONS!!!{Style.RESET_ALL}""")
         time.sleep(2)
         clear_screen()
