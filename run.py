@@ -1,7 +1,6 @@
 import random
 import string
 import os
-import time
 from art import *
 from time import sleep
 from colorama import Fore, Style
@@ -10,58 +9,36 @@ from hangman_visual import hangman_visual_dict
 
 
 
-"""S
-Prints logo
-"""
+""" Prints logo """
 def hello():
     Art = text2art("HANGMAN")
     print(Art)
 
 
-"""
-Clear function to clean-up the terminal.
-"""
+""" Clear function to clean-up the terminal."""
 def clear_screen():
     os.system("cls" if os.name == "nt" else "clear")
 
 
+""" Ask for users name """
 def get_user_name():
+    print(f"""Welcome to Hangman""")
     name = ''
     while True:
-        name = input(f"""{Fore.GREEN }"What is your name ?\n
+        name = input(f"""{Fore.GREEN } What is your name ?\n
         {Style.RESET_ALL}""").capitalize()
-        if name.isalpha() == True:
+        print(' Please enter at least 3 letters.')
+        if name.isalpha() and len (name) > 2:
             print('')
             clear_screen()
             print("Hello, " + name)
             break
         else:
-             print(f"""{Fore.RED}Please enter your name using letters only!{Style.RESET_ALL}""")
+            print(f"""{Fore.RED}Please enter your name using letters only!{Style.RESET_ALL}""")
     return name
 
 
-def restart():
-    clear_screen()
-    print(f"""{Fore.GREEN} Would you like to play again ?{Style.RESET_ALL}""")
-    restart = input('Yes / No(Y/N)\n')
-    if restart.upper() == 'Y':
-        clear_screen()
-        time.sleep(1)
-        print(f"""{Fore.GREEN} Restarting...\n {Style.RESET_ALL}""")
-        time.sleep(0.5)
-        clear_screen()
-        start_game()
-    elif restart.upper() == 'N':
-        clear_screen()
-        print(f"""{Fore.GREEN}Goodbye{Style.RESET_ALL}""")
-        exit()
-
-
-"""
-Randomly choose word from list.
-"""
-
-
+"""Randomly choose word from list."""
 def get_valid_word(words):
     word = random.choice(words)
     while '-' in word or ' ' in word:
@@ -69,10 +46,8 @@ def get_valid_word(words):
     return word.upper()
 
 
-"""
-Start game,set number of letters in word
-and check what letters the user has guessed.
-"""
+""" Start game,set number of letters in word and check 
+what letters the user has guessed."""
 def start_game():
     word = get_valid_word(words)
     word_letters = set(word)
@@ -84,7 +59,7 @@ def start_game():
     # Get the users letter input.
     while len(word_letters) > 0 and lives > 0 :
         # letters used
-        print('You have' +Fore.GREEN, lives, 'lives left and you have used these letters: ', '  '.join(used_letters))
+        print('You have',lives, 'lives left and you have used these letters: ', '  '.join(used_letters))
         #The  current word is (ie. W - R D)
         word_list = [letter if letter in used_letters else '-' for letter in word]
         print(hangman_visual_dict[lives])
@@ -97,9 +72,7 @@ def start_game():
                 word_letters.remove(user_letter)
                 print('')
             else:
-                """
-                Takes away a life if letter is not in the word.
-                """
+               # Takes away a life if letter is not in the word.
                 lives = lives - 1
                 print('Sorry but your chosen letter,', user_letter, 'is not in the word.\n')
 
@@ -110,20 +83,18 @@ def start_game():
             print(f""" \n {Fore.RED} Sorry but that is not a valid letter.
             {Style.RESET_ALL}""")
 
-    """
-    Game ends when letter == 0 OR when lives == 0 OR user guesses the correct word.
-    """
+    # Game ends when letter == 0 OR when lives == 0 OR user guesses the correct word.
     if lives == 0:
         print(hangman_visual_dict[lives])
         print('Uh Oh you died, sorry. The word was', word)
-        time.sleep(2)
+        sleep(2)
         start_game()
     else:
         clear_screen()
         print('YAY! You guessed the word', word, '!!')
         print('')
         print(f"""{Fore.CYAN} CONGRATULATIONS!!!{Style.RESET_ALL}""")
-        time.sleep(2)
+        sleep(2)
         clear_screen()
         restart()
 
@@ -136,20 +107,19 @@ game_options = {
 }
 
 
+""" Prints menu options and asks user to selet an option"""
 def print_menu(user_name):
     print(f"""{Fore.GREEN}Please select one of the following options by typing the cooresponding number and hitting Enter.{Style.RESET_ALL}""")
     for key in game_options.keys():
-        print(key,'--', game_options[key])
+        print(key, '--', game_options[key])
     while (True):
         option = ''
         try:
             option = int(input('Please enter your selected menu option here  :  '))
         except:
+            ValueError
             print(f"""{Fore.RED}Incorrect input type.{Style.RESET_ALL}""")
-
-        """
-        Check what option was entered by the user.
-        """
+        # Check what option was entered by the user.
         if option == 1:
             option1()
             start_game()
@@ -170,9 +140,9 @@ def print_menu(user_name):
 
 def option1():
     clear_screen()
-    time.sleep(1)
+    sleep(1)
     print(f"""{Fore.GREEN}Lets Play.....\n {Style.RESET_ALL}""")
-    time.sleep(0.5)
+    sleep(0.5)
 
 
 def option2(user_name):
@@ -186,11 +156,9 @@ def option3(user_name):
     print("Goodbye, " + user_name)
 
 
+""" Game rules and how to play."""
 def rules(user_name):
     clear_screen
-    """
-    Game rules and how to play.
-    """
     print(f"""{Fore.BLUE}
     * Try to save the hangman by guessing the  random word.
     * Guess a single letter at a time until you find the corrrect word.
@@ -203,6 +171,25 @@ def rules(user_name):
     clear_screen()
     sleep(1)
     print_menu(user_name)
+
+
+"""Restart function to restart the game."""
+def restart():
+    clear_screen()
+    print(f"""{Fore.GREEN} Would you like to play again ?{Style.RESET_ALL}""")
+    while True:
+        restart = input('Yes / No(Y/N)\n')
+        if restart.upper() == 'Y':
+            clear_screen()
+            sleep(1)
+            print(f"""{Fore.GREEN} Restarting...\n {Style.RESET_ALL}""")
+            sleep(0.5)
+            clear_screen()
+            start_game()
+        else:
+            clear_screen()
+            print(f""" {Fore.BLUE} Goodbye, Thanks for playing , we hope you had fun!!!{Style.RESET_ALL}""")
+            exit()
 
 
 def main():

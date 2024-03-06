@@ -1,32 +1,39 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# Hangman
+Hangman is a terminal game based in the classic word game hangman.
 
-Welcome,
+## How to play
+## User Stories
+  As a user:
+*    I want to be able to enter my name and get feedback if I have entered it incorrectly.
+*   I want to be able to view the rules of the game.
+*   I want to be able to see how many letters I need to guess.
+*   I want to be able to see what letter I have already guessed.
+*   I want to be notified if I select something other than a letter.
+*   I want to be notified if I have already guessed a certain letter.
+*    I want to know how many lives or guesses I have left.
+*   I want a picture so I can visualise how many lives or guesses I have left.
+*   I want to be able to restart the game without having to exit first.
 
-This is the Code Institute student template for deploying your third portfolio project, the Python command-line project. The last update to this file was: **March 14, 2023**
+## Features
 
-## Reminders
+### Welcome Screen
+The welcome screen has a large hangman logo to show the user what game they are playing.
+The user is then welcomed to the game via a welcome message and asked to enter their name.
 
-- Your code must be placed in the `run.py` file
-- Your dependencies must be placed in the `requirements.txt` file
-- Do not edit any of the other files or your code may not deploy properly
 
-## Creating the Heroku app
 
-When you create the app, you will need to add two buildpacks from the _Settings_ tab. The ordering is as follows:
+After entering their name the user is then welcomed by name.
 
-1. `heroku/python`
-2. `heroku/nodejs`
+### Main Menu 
+The user is then presented with a menu from which they can select one of three options :
 
-You must then create a _Config Var_ called `PORT`. Set this to `8000`
+1. Play the game.
+2. See the Rules.
+3. Exit game.
 
-If you have credentials, such as in the Love Sandwiches project, you must create another _Config Var_ called `CREDS` and paste the JSON into the value field.
+#### Play the Game 
+#### The Rules
+if the user selects to view the rules they will be presented with a list of rules and told to click enter, to return to the main menu.
 
-Connect your GitHub repository and deploy as normal.
-
-## Constraints
-
-The deployment terminal is set to 80 columns by 24 rows. That means that each line of text needs to be 80 characters or less otherwise it will be wrapped onto a second line.
-
----
-
-Happy coding!
+#### Exit
+If the user selects to exit the game they will be presented with a goodbye message.
