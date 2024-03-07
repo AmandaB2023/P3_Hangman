@@ -73,7 +73,7 @@ def start_game():
                 word_letters.remove(user_letter)
                 print('')
             else:
-               # Takes away a life if letter is not in the word.
+            # Takes away a life if letter is not in the word.
                 lives = lives - 1
                 print('Sorry but your chosen letter,', user_letter, 'is not in the word.\n')
 
@@ -154,7 +154,7 @@ def option2(user_name):
 
 def option3(user_name):
     clear_screen()
-    print(f"""{Fore.MAGENTA}Thanks for playing !!{Style.RESET_ALL}""")
+    print(f"""{Fore.CYAN}Thanks for playing !!{Style.RESET_ALL}""")
     print("Goodbye, " + user_name)
 
 

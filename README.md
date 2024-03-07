@@ -1,7 +1,10 @@
 # Hangman
+
+![Hangman Responsive](documentation/amiresponsive.JPG)
+
 Hangman is a terminal game based on the classic word game Hangman.
 
-*The link to [Hangman](https://af-project-3-hangman-ab624bdbed0d.herokuapp.com/)
+* The link to [Hangman](https://af-project-3-hangman-ab624bdbed0d.herokuapp.com/)
 
 ## How to play
 
@@ -29,9 +32,11 @@ Hangman is a terminal game based on the classic word game Hangman.
 The welcome screen has a large hangman logo to show the user what game they are playing.
 The user is then welcomed to the game via a welcome message and asked to enter their name.
 
+![HAngman](documentation/hangman.JPG)
 
 
 After entering their name the user is then welcomed by name.
+
 
 ### Main Menu 
 The user is then presented with a menu from which they can select one of three options :
@@ -39,6 +44,8 @@ The user is then presented with a menu from which they can select one of three o
 1. Play the game.
 2. See the Rules.
 3. Exit game.
+
+![Main Menu](documentation/menu.JPG)
 
 #### Play the Game 
 If the user selects to play the game they are presented with a statement informing them of how many lives they have and what letters they have already used. They will also be presented with a graphic that will change everytime the user loses a life.
@@ -52,6 +59,8 @@ If the user guesses the word they will be congratulated and asked if they would 
 
 #### The Rules
 if the user selects to view the rules they will be presented with a list of rules and told to click enter, to return to the main menu.
+
+![Rules](documentation/rules.JPG)
 
 #### Exit
 If the user selects to exit the game they will be presented with a goodbye message.
@@ -113,23 +122,33 @@ Then code . to open VS Studio using Windows.
 
 Clone the repository as above.
 
-Create Heroku account here 
+Create Heroku account here
 
 Create a new Heroku application by clicking creat new app.
+
+![Create App Heroku](documentation/heroku_new.JPG)
 
 Go to deploy tab.
 
 Link your Github account
 
+![Github Heroku](documentation/heroku_github.JPG)
+
 Go to settings and add buildpack.
 
 Add Python and Node.js in that order.
 
+
+![Buildpack Heroku](documentation/buildpack_heroku.JPG)
+
 Go to the Deploy tab and select deploy from branch.
+
 
 Wait for completion and click view.
 
-##Credits
+![Deploy from branch Heroku](documentation/heroke_deploy_2.JPG)
+
+## Credits
 Color formatting: [Colorama](https://pypi.org/project/colorama/).
 
-##Acknowledgements
+## Acknowledgements
