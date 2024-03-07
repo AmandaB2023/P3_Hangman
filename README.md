@@ -48,27 +48,36 @@ The user is then presented with a menu from which they can select one of three o
 ![Main Menu](documentation/menu.JPG)
 
 #### Play the Game 
-If the user selects to play the game they are presented with a statement informing them of how many lives they have and what letters they have already used. They will also be presented with a graphic that will change everytime the user loses a life.
+*   If the user selects to play the game they are presented with a statement informing them of how many lives they have and what letters they have already used. They will also be presented with a graphic that will change everytime the user loses a life.
 The user will be shown lines to indicate how many letters in length the current word is, which they have to guess. They will then be asked to input a letter and press enter.
 
-If the user enters a letter that is not in the current word, they will be told Sooy but your chosen letter is not in the word, followed by the number of lives they have left and the letters used. The graphic will also be updated to reflect this.
+*   If the user enters a letter that is not in the current word, they will be told Sooy but your chosen letter is not in the word, followed by the number of lives they have left and the letters used. The graphic will also be updated to reflect this.
 
-If the user fails to select a correct letter then the game will come to an end.
+*   If the user fails to select a correct letter then the game will come to an end.
 
-If the user guesses the word they will be congratulated and asked if they would like to play again, here they can either select Y to play again or hit any other key to exit where they will receive a goodbye message.
+*   If the user guesses the word they will be congratulated and asked if they would like to play again, here they can either select Y to play again or hit any other key to exit where they will receive a goodbye message.
 
 #### The Rules
-if the user selects to view the rules they will be presented with a list of rules and told to click enter, to return to the main menu.
+*   If the user selects to view the rules they will be presented with a list of rules and told to click enter, to return to the main menu.
 
 ![Rules](documentation/rules.JPG)
 
 #### Exit
-If the user selects to exit the game they will be presented with a goodbye message.
+
+*   If the user selects to exit the game they will be presented with a goodbye message.
+
+![Exit](documentation/exit.JPG)
+
+## Design
+As no images could be used for this project. I created a logo image for the star of the game using the Python Art library to convert text to ASCII.
+
+The colors available for this project were also limited so I introduced colors where I could to make the terminal more aesthetically pleasing to the user.
 
 ## Technologies Used
+
 The following technologies were used to complete this project.
 
-*   Python - was used to write the program.
+*   [Python](https://www.python.org/) - was used to write the program.
 *   HTML - was used to build that mock terminal.
 *   Javascript - was used to provide the start-up script to run the Code Institute terminal.
 *   [GitHub](https://github.com/) was used to host the project code after being pushed.
@@ -77,12 +86,27 @@ The following technologies were used to complete this project.
 *   VS Code - was used to write and edit code for the project.
 
 ### Imported Libraries 
-*   random - was used to randomly select a word for the user to play from the list of words in the words.py file.
-*   os - was used to clear the terminal to make for a better user experience by reducing clutter on the screen.
-*   Colorama - was used to add some color to the project and make it more aesthetically pleasing for the user.
+*   [random](https://docs.python.org/3/library/random.html) - was used to randomly select a word for the user to play from the list of words in the words.py file.
+
+*   [os](https://docs.python.org/3/library/os.html) - was used to clear the terminal to make for a better user experience by reducing clutter on the screen.
+
+*   [Colorama](https://pypi.org/project/colorama/) - was used to add some color to the project and make it more aesthetically pleasing for the user.
+
+*   [Art](https://pypi.org/project/art/) - was used to create ASCII for the starting page of this project.
 
 ## Bugs 
+
+### Solved Bugs
+ *  I had a bug in my restart game function, whereby it was not giving the correct response to the user's input, in order to solve this I added a while loop so that now the user must select Y to restart the game again and hit enter otherwise any other selection will exit the game.
+
+*    I also had a bug as I originally had my game logo in an external file but every time the program was run the logo would go out of sync. Therefore I opted to import Python Art and use that instead to convert text to ASCII.
+
+ *  On deployment I had a bug running my Art import however according to logs on Heroku, I understood that I had not set up the Art import correctly in my requirements.txt file.
+
+ *  I did have another issue calling the user's name so in order to resolve this user_name was defined and added to the functions which required it.
+
 ## Testing 
+Please find the link to testing here: [Testing](TESTING.md)
 ## Deployment
 
 The project was deployed to Heroku
@@ -101,7 +125,7 @@ Extract the ZIP file to a location on your PC.
 *   Clone Repository
 
 In order to make a local copy of this project, you can clone 
-it. 
+it to your desktop.
 
 Sign in to GitHub, locate the repository and click to open the repository.
 
@@ -111,7 +135,11 @@ This will open a drop - menu.
 
 In the dropdown menu stay on the HTTPS option and click the copy icon button next to the URL to copy it.
 
-Next open Git Bash and type git clone and your directory link.#
+![Github](documentation/hangman_github.JPG)
+
+Next open Git Bash and type git clone and your directory link.
+
+![Gitbash](documentation/gitbash.JPG)
 
 Then type cd and the directory name.
 

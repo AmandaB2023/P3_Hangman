@@ -9,6 +9,7 @@ hangman_visual_dict = {
                |
 
                H A N G M A N !!
+               {Style.RESET_ALL}
            """,
         1: f"""{Fore.GREEN}
                 ___________
@@ -19,6 +20,7 @@ hangman_visual_dict = {
                |
 
                 H A N G M A _
+                {Style.RESET_ALL}
             """,
         2: f"""{Fore.GREEN}
                 ___________
@@ -29,6 +31,7 @@ hangman_visual_dict = {
                |
 
                H A N G M _ _
+               {Style.RESET_ALL}
             """,
         3: f"""{Fore.GREEN}
                 ___________
@@ -39,6 +42,7 @@ hangman_visual_dict = {
                |
 
                H A N G _ _ _
+               {Style.RESET_ALL}
             """,
         4: f"""{Fore.GREEN}
                 ___________
@@ -49,6 +53,7 @@ hangman_visual_dict = {
                |
 
                H A N _ _ _ _
+              {Style.RESET_ALL}
             """,
         5: f"""{Fore.GREEN}
                 ___________
@@ -59,6 +64,7 @@ hangman_visual_dict = {
                |
 
                H A _ _ _ _ _
+               {Style.RESET_ALL}
             """,
         6: f"""{Fore.GREEN}
                |
@@ -69,7 +75,7 @@ hangman_visual_dict = {
 
                H _ _ _ _ _ _
                
-        ******************************* 
+        {Style.RESET_ALL}
             """,
         7:f"""{Fore.GREEN}
                 _ _ _ _ _ _ _

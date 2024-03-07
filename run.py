@@ -86,9 +86,7 @@ def start_game():
             else:
                 # Takes away a life if letter is not in the word.
                 lives = lives - 1
-                print(f"""
-                Sorry but your chosen letter,', user_letter,
-                'is not in the word.\n""")
+                print('Sorry but your chosen letter,', user_letter,'is not in the word.\n')
 
         elif user_letter in used_letters:
             print(f"""\n Oops you have already used that letter.
