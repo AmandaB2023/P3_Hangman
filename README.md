@@ -2,13 +2,13 @@
 
 ![Hangman Responsive](documentation/amiresponsive.JPG)
 
-Hangman is a terminal game based on the classic word game Hangman.
+Hangman is a terminal game based on the classic word game Hangman. The user must figure out the word by guessing different letters.
 
-* The link to [Hangman](https://af-project-3-hangman-ab624bdbed0d.herokuapp.com/)
+* Here is the link to [Hangman](https://af-project-3-hangman-ab624bdbed0d.herokuapp.com/)
 
 ## How to play
 
-*   Click on this link (https://af-project-3-hangman-ab624bdbed0d.herokuapp.com/) or copy and paste to browser.
+*   Click on this link (https://af-project-3-hangman-ab624bdbed0d.herokuapp.com/) or copy and paste link to browser.
 *   As soon as the page loads enter your name.
 *   Select one of the options from the menu.
 *   Learn the rules
@@ -32,11 +32,9 @@ Hangman is a terminal game based on the classic word game Hangman.
 The welcome screen has a large hangman logo to show the user what game they are playing.
 The user is then welcomed to the game via a welcome message and asked to enter their name.
 
-![Hangman](documentation/hangman.JPG)
-
-
 After entering their name the user is then welcomed by name.
 
+![Hangman](documentation/hangman.JPG)
 
 ### Main Menu 
 The user is then presented with a menu from which they can select one of three options :
@@ -51,13 +49,31 @@ The user is then presented with a menu from which they can select one of three o
 *   If the user selects to play the game they are presented with a statement informing them of how many lives they have and what letters they have already used. They will also be presented with a graphic that will change every time the user loses a life.
 The user will be shown lines to indicate how many letters in length the current word is, which they have to guess. They will then be asked to input a letter and press enter.
 
+
 ![Play](documentation/lets_play.JPG)
 
-*   If the user enters a letter that is not in the current word, they will be told Sooy but your chosen letter is not in the word, followed by the number of lives they have left and the letters used. The graphic will also be updated to reflect this.
+*   If the user enters a letter that is not in the current word, they will be told Sorry but your chosen letter is not in the word, followed by the number of lives they have left and the letters used. The graphic will also be updated to reflect this.
+
+
+![Incorrect1](documentation/incorrect_1.JPG)
+
+![Incorrect2](documentation/incorrect_2.JPG)
+
+
+![Incorrect6](documentation/incorrect_6.JPG)
+
 
 *   If the user fails to select a correct letter then the game will come to an end.
 
+![Incorrect end](documentation/incorrect_end.JPG)
+
 *   If the user guesses the word they will be congratulated and asked if they would like to play again, here they can either select Y to play again or hit any other key to exit where they will receive a goodbye message.
+
+![End Win](documentation/end_win.JPG)
+
+
+![Restart](documentation/restart.JPG)
+
 
 #### The Rules
 *   If the user selects to view the rules they will be presented with a list of rules and told to click enter, to return to the main menu.
@@ -87,9 +103,9 @@ The following technologies were used to complete this project.
 *   HTML - was used to build that mock terminal.
 *   Javascript - was used to provide the start-up script to run the Code Institute terminal.
 *   [GitHub](https://github.com/) was used to host the project code after being pushed.
-*   Git - was used for the version control of the website.
-*   Heroku - was used to deploy the project.
-*   VS Code - was used to write and edit code for the project.
+*   [Git](https://git-scm.com/) - was used for the version control of the website.
+*   [Heroku](https://dashboard.heroku.com/apps) - was used to deploy the project.
+*   [VS Code](https://code.visualstudio.com/)- was used to write and edit code for the project.
 
 ### Imported Libraries 
 *   [random](https://docs.python.org/3/library/random.html) - was used to randomly select a word for the user to play from the list of words in the words.py file.
@@ -111,6 +127,9 @@ The following technologies were used to complete this project.
 
  *  I did have another issue calling the user's name so in order to resolve this user_name was defined and added to the functions which required it.
 
+### Other 
+
+I failed to commit regularly given the nature of the project and using the terminal, this is something ai must keep in mind going forward.
 ## Testing 
 Please find the link to testing here: [Testing](TESTING.md)
 ## Deployment
@@ -186,3 +205,17 @@ Wait for completion and click view.
 Color formatting: [Colorama](https://pypi.org/project/colorama/)
 
 ## Acknowledgements
+
+As always my mentor Juliia Konovalova was a huge help to me and assisted me in fixing some bugs that I was stuck on.
+
+*   For my menu
+
+[Rafael Rodríguez Puente](https://github.com/rrpuente/OOP/blob/main/menu.py)
+
+[Computer Learner](https://computinglearner.com/how-to-create-a-menu-for-a-python-console-application/)
+
+*   For Hangman code.
+
+[Invent with Python](https://inventwithpython.com/invent4thed/chapter8.html)
+
+[Python For Biginners](https://www.pythonforbeginners.com/code-snippets-source-code/game-hangman)
