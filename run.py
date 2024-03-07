@@ -105,7 +105,7 @@ def start_game():
         print('Uh Oh you died, sorry. The word was', word)
         sleep(2)
         clear_screen()
-        start_game()
+        restart()
     else:
         clear_screen()
         print('YAY! You guessed the word', word, '!!')
