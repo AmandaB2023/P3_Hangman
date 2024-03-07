@@ -104,6 +104,7 @@ def start_game():
         print(hangman_visual_dict[lives])
         print('Uh Oh you died, sorry. The word was', word)
         sleep(2)
+        clear_screen()
         start_game()
     else:
         clear_screen()
