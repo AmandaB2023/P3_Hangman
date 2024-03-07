@@ -69,8 +69,8 @@ def start_game():
     # Get the users letter input.
     while len(word_letters) > 0 and lives > 0:
         # letters used
-        print(f"""You have', lives, 'lives left
-        and you have used these letters: ',' '.join(used_letters)""")
+        print('You have', lives, 
+              'lives left and you have used these letters: ',' '.join(used_letters))
         # The  current word is (ie. W - R D)
         word_list = [letter if letter in used_letters else '-' for letter in word]
         print(hangman_visual_dict[lives])
