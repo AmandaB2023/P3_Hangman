@@ -11,7 +11,7 @@ from hangman_visual import hangman_visual_dict
 
 """ Prints logo """
 def hello():
-    Art = text2art("HANGMAN")
+    Art = text2art("  HANGMAN  ")
     print(Art)
 
 
@@ -34,7 +34,7 @@ def get_user_name():
             print("Hello, " + name)
             break
         else:
-            print(f"""{Fore.RED}Please enter your name using letters only!{Style.RESET_ALL}""")
+            print(f"""{Fore.RED}Please enter your name using letters only! and press Enter{Style.RESET_ALL}""")
     return name
 
 
@@ -64,8 +64,9 @@ def start_game():
         word_list = [letter if letter in used_letters else '-' for letter in word]
         print(hangman_visual_dict[lives])
         print('Your current word is : ', ' '.join(word_list))
+        print(f"The word has {len(word)} letters.")
 
-        user_letter = input('Please select a letter: ').upper()
+        user_letter = input('Please select a letter and hit Enter: ').upper()
         if user_letter in alphabet - used_letters:
             used_letters.add(user_letter)
             if user_letter in word_letters:
@@ -109,7 +110,8 @@ game_options = {
 
 """ Prints menu options and asks user to selet an option"""
 def print_menu(user_name):
-    print(f"""{Fore.GREEN}Please select one of the following options by typing the cooresponding number and hitting Enter.{Style.RESET_ALL}""")
+    print(f"""{Fore.GREEN}Please select one of the following options by typing 
+    the cooresponding number and hitting Enter.{Style.RESET_ALL}""")
     for key in game_options.keys():
         print(key, '--', game_options[key])
     while (True):
@@ -176,9 +178,10 @@ def rules(user_name):
 """Restart function to restart the game."""
 def restart():
     clear_screen()
-    print(f"""{Fore.GREEN} Would you like to play again ?{Style.RESET_ALL}""")
+    print(f"""{Fore.GREEN} Would you like to play again ? {Style.RESET_ALL}""")
     while True:
-        restart = input('Yes / No(Y/N)\n')
+        restart = input(""" For Yes please press Y and hit Enter , 
+                        For No just hit Enter\n""")
         if restart.upper() == 'Y':
             clear_screen()
             sleep(1)

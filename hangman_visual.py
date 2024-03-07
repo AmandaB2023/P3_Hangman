@@ -1,5 +1,6 @@
+from colorama import Fore, Style
 hangman_visual_dict = {
-        0: """
+        0: f"""{Fore.RED}
                 ___________
                | /        | 
                |/        ( )
@@ -9,7 +10,7 @@ hangman_visual_dict = {
 
                H A N G M A N !!
            """,
-        1: """
+        1: f"""{Fore.GREEN}
                 ___________
                | /        | 
                |/        ( )
@@ -19,7 +20,7 @@ hangman_visual_dict = {
 
                 H A N G M A _
             """,
-        2: """
+        2: f"""{Fore.GREEN}
                 ___________
                | /        | 
                |/        ( )
@@ -29,7 +30,7 @@ hangman_visual_dict = {
 
                H A N G M _ _
             """,
-        3: """
+        3: f"""{Fore.GREEN}
                 ___________
                | /        | 
                |/        ( )
@@ -39,7 +40,7 @@ hangman_visual_dict = {
 
                H A N G _ _ _
             """,
-        4: """
+        4: f"""{Fore.GREEN}
                 ___________
                | /        | 
                |/        
@@ -49,7 +50,7 @@ hangman_visual_dict = {
 
                H A N _ _ _ _
             """,
-        5: """
+        5: f"""{Fore.GREEN}
                 ___________
                | /        
                |/        
@@ -59,16 +60,20 @@ hangman_visual_dict = {
 
                H A _ _ _ _ _
             """,
-        6: """
+        6: f"""{Fore.GREEN}
                |
                |
                |
                |
                |
-               
+
                H _ _ _ _ _ _
+               
+        ******************************* 
             """,
-        7:"""
+        7:f"""{Fore.GREEN}
                 _ _ _ _ _ _ _
+
+        *******************************       
           """,
     }
