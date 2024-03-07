@@ -69,8 +69,8 @@ def start_game():
     # Get the users letter input.
     while len(word_letters) > 0 and lives > 0:
         # letters used
-        print('You have', lives, 
-              'lives left and you have used these letters: ',' '.join(used_letters))
+        print('You have', lives, 'lives left and you have',
+            'used these letters: ', ' '.join(used_letters))
         # The  current word is (ie. W - R D)
         word_list = [letter if letter in used_letters else '-' for letter in word]
         print(hangman_visual_dict[lives])
@@ -83,15 +83,19 @@ def start_game():
             if user_letter in word_letters:
                 word_letters.remove(user_letter)
                 print('')
+                clear_screen()
             else:
+                clear_screen()
                 # Takes away a life if letter is not in the word.
                 lives = lives - 1
-                print('Sorry but your chosen letter,', user_letter,'is not in the word.\n')
-
+                print('Sorry but your chosen letter,', user_letter,
+                      'is not in the word.\n')
         elif user_letter in used_letters:
-            print(f"""\n Oops you have already used that letter.
-            Have another guess.""")
+            clear_screen()
+            print(f"""Oops you have already used that letter.
+            Have another guess.\n""")
         else:
+            clear_screen()
             print(f""" \n {Fore.RED} Sorry but that is not a valid letter.
             {Style.RESET_ALL}""")
 
@@ -198,8 +202,8 @@ def restart():
     clear_screen()
     print(f"""{Fore.GREEN} Would you like to play again ? {Style.RESET_ALL}""")
     while True:
-        restart = input(""" For Yes please press Y and hit Enter ,
-                        For No just hit Enter\n""")
+        restart = input(""" For Yes please press Y and hit Enter,
+For No just hit Enter\n""")
         if restart.upper() == 'Y':
             clear_screen()
             sleep(1)
@@ -209,9 +213,10 @@ def restart():
             start_game()
         else:
             clear_screen()
-            print(f""" {Fore.BLUE}
-            Goodbye, Thanks for playing ,
-            we hope you had fun!!!{Style.RESET_ALL}""")
+            print
+            (f""" {Fore.BLUE}
+            Goodbye, Thanks for playing , we hope you had fun!!!
+                {Style.RESET_ALL}""")
             exit()
 
 

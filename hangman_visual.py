@@ -2,7 +2,7 @@ from colorama import Fore, Style
 hangman_visual_dict = {
         0: f"""{Fore.RED}
                 ___________
-               | /        | 
+               | /        |
                |/        ( )
                |          |
                |         / \\
@@ -13,10 +13,10 @@ hangman_visual_dict = {
            """,
         1: f"""{Fore.GREEN}
                 ___________
-               | /        | 
+               | /        |
                |/        ( )
                |          |
-               |         / 
+               |         /
                |
 
                 H A N G M A _
@@ -24,10 +24,10 @@ hangman_visual_dict = {
             """,
         2: f"""{Fore.GREEN}
                 ___________
-               | /        | 
+               | /        |
                |/        ( )
                |          |
-               |          
+               |
                |
 
                H A N G M _ _
@@ -35,10 +35,10 @@ hangman_visual_dict = {
             """,
         3: f"""{Fore.GREEN}
                 ___________
-               | /        | 
+               | /        |
                |/        ( )
-               |          
-               |          
+               |
+               |
                |
 
                H A N G _ _ _
@@ -46,10 +46,10 @@ hangman_visual_dict = {
             """,
         4: f"""{Fore.GREEN}
                 ___________
-               | /        | 
-               |/        
-               |          
-               |          
+               | /        |
+               |/
+               |
+               |
                |
 
                H A N _ _ _ _
@@ -57,10 +57,10 @@ hangman_visual_dict = {
             """,
         5: f"""{Fore.GREEN}
                 ___________
-               | /        
-               |/        
-               |          
-               |          
+               | /
+               |/
+               |
+               |
                |
 
                H A _ _ _ _ _
@@ -74,12 +74,12 @@ hangman_visual_dict = {
                |
 
                H _ _ _ _ _ _
-               
+
         {Style.RESET_ALL}
             """,
-        7:f"""{Fore.GREEN}
+        7: f"""{Fore.GREEN}
                 _ _ _ _ _ _ _
 
-        *******************************  {Style.RESET_ALL}     
+        *******************************  {Style.RESET_ALL}
           """,
     }

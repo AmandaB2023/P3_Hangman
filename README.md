@@ -32,7 +32,7 @@ Hangman is a terminal game based on the classic word game Hangman.
 The welcome screen has a large hangman logo to show the user what game they are playing.
 The user is then welcomed to the game via a welcome message and asked to enter their name.
 
-![HAngman](documentation/hangman.JPG)
+![Hangman](documentation/hangman.JPG)
 
 
 After entering their name the user is then welcomed by name.
@@ -48,8 +48,10 @@ The user is then presented with a menu from which they can select one of three o
 ![Main Menu](documentation/menu.JPG)
 
 #### Play the Game 
-*   If the user selects to play the game they are presented with a statement informing them of how many lives they have and what letters they have already used. They will also be presented with a graphic that will change everytime the user loses a life.
+*   If the user selects to play the game they are presented with a statement informing them of how many lives they have and what letters they have already used. They will also be presented with a graphic that will change every time the user loses a life.
 The user will be shown lines to indicate how many letters in length the current word is, which they have to guess. They will then be asked to input a letter and press enter.
+
+![Play](documentation/lets_play.JPG)
 
 *   If the user enters a letter that is not in the current word, they will be told Sooy but your chosen letter is not in the word, followed by the number of lives they have left and the letters used. The graphic will also be updated to reflect this.
 
@@ -71,7 +73,11 @@ The user will be shown lines to indicate how many letters in length the current 
 ## Design
 As no images could be used for this project. I created a logo image for the star of the game using the Python Art library to convert text to ASCII.
 
+![Hamgman logo](documentation/hangman_image.JPG)
+
 The colors available for this project were also limited so I introduced colors where I could to make the terminal more aesthetically pleasing to the user.
+
+![Colors](documentation/lets_play.JPG)
 
 ## Technologies Used
 
@@ -156,7 +162,7 @@ Create a new Heroku application by clicking creat new app.
 
 ![Create App Heroku](documentation/heroku_new.JPG)
 
-Go to deploy tab.
+Go to the deploy tab.
 
 Link your Github account
 
@@ -177,6 +183,6 @@ Wait for completion and click view.
 ![Deploy from branch Heroku](documentation/heroke_deploy_2.JPG)
 
 ## Credits
-Color formatting: [Colorama](https://pypi.org/project/colorama/).
+Color formatting: [Colorama](https://pypi.org/project/colorama/)
 
 ## Acknowledgements
