@@ -1,6 +1,6 @@
 # Hangman
 
-![Hangman Responsive](documentation/amiresponsive.JPG)
+![Hangman Responsive](documentation/amiresponsive.jpg)
 
 Hangman is a terminal game based on the classic word game Hangman. The user must figure out the word by guessing different letters.
 
@@ -34,7 +34,7 @@ The user is then welcomed to the game via a welcome message and asked to enter t
 
 After entering their name the user is then welcomed by name.
 
-![Hangman](documentation/hangman.JPG)
+![Hangman](documentation/hangman.jpg)
 
 ### Main Menu 
 The user is then presented with a menu from which they can select one of three options :
@@ -43,57 +43,57 @@ The user is then presented with a menu from which they can select one of three o
 2. See the Rules.
 3. Exit game.
 
-![Main Menu](documentation/menu.JPG)
+![Main Menu](documentation/menu.jpg)
 
 #### Play the Game 
 *   If the user selects to play the game they are presented with a statement informing them of how many lives they have and what letters they have already used. They will also be presented with a graphic that will change every time the user loses a life.
 The user will be shown lines to indicate how many letters in length the current word is, which they have to guess. They will then be asked to input a letter and press enter.
 
 
-![Play](documentation/lets_play.JPG)
+![Play](documentation/lets_play.jpg)
 
 *   If the user enters a letter that is not in the current word, they will be told Sorry but your chosen letter is not in the word, followed by the number of lives they have left and the letters used. The graphic will also be updated to reflect this.
 
 
-![Incorrect1](documentation/incorrect_1.JPG)
+![Incorrect1](documentation/incorrect_1.jpg)
 
-![Incorrect2](documentation/incorrect_2.JPG)
+![Incorrect2](documentation/incorrect_2.jpg)
 
 
-![Incorrect6](documentation/incorrect_6.JPG)
+![Incorrect6](documentation/incorrect_6.jpg)
 
 
 *   If the user fails to select a correct letter then the game will come to an end.
 
-![Incorrect end](documentation/incorrect_end.JPG)
+![Incorrect end](documentation/incorrect_end.jpg)
 
 *   If the user guesses the word they will be congratulated and asked if they would like to play again, here they can either select Y to play again or hit any other key to exit where they will receive a goodbye message.
 
-![End Win](documentation/end_win.JPG)
+![End Win](documentation/end_win.jpg)
 
 
-![Restart](documentation/restart.JPG)
+![Restart](documentation/restart.jpg)
 
 
 #### The Rules
 *   If the user selects to view the rules they will be presented with a list of rules and told to click enter, to return to the main menu.
 
-![Rules](documentation/rules.JPG)
+![Rules](documentation/rules.jpg)
 
 #### Exit
 
 *   If the user selects to exit the game they will be presented with a goodbye message.
 
-![Exit](documentation/exit.JPG)
+![Exit](documentation/exit.jpg)
 
 ## Design
 As no images could be used for this project. I created a logo image for the star of the game using the Python Art library to convert text to ASCII.
 
-![Hamgman logo](documentation/hangman_image.JPG)
+![Hamgman logo](documentation/hangman_image.jpg)
 
 The colors available for this project were also limited so I introduced colors where I could to make the terminal more aesthetically pleasing to the user.
 
-![Colors](documentation/lets_play.JPG)
+![Colors](documentation/lets_play.jpg)
 
 ## Technologies Used
 
@@ -130,8 +130,13 @@ The following technologies were used to complete this project.
 ### Other 
 
 I failed to commit regularly given the nature of the project and using the terminal, this is something ai must keep in mind going forward.
+
+
 ## Testing 
+
 Please find the link to testing here: [Testing](TESTING.md)
+
+
 ## Deployment
 
 The project was deployed to Heroku
@@ -149,7 +154,7 @@ Extract the ZIP file to a location on your PC.
 
 *   Clone Repository
 
-In order to make a local copy of this project, you can clone 
+To make a local copy of this project, you can clone 
 it to your desktop.
 
 Sign in to GitHub, locate the repository and click to open the repository.
@@ -160,11 +165,11 @@ This will open a drop - menu.
 
 In the dropdown menu stay on the HTTPS option and click the copy icon button next to the URL to copy it.
 
-![Github](documentation/hangman_github.JPG)
+![Github](documentation/hangman_github.jpg)
 
 Next open Git Bash and type git clone and your directory link.
 
-![Gitbash](documentation/gitbash.JPG)
+![Gitbash](documentation/gitbash.jpg)
 
 Then type cd and the directory name.
 
@@ -179,27 +184,27 @@ Create Heroku account here
 
 Create a new Heroku application by clicking creat new app.
 
-![Create App Heroku](documentation/heroku_new.JPG)
+![Create App Heroku](documentation/heroku_new.jpg)
 
 Go to the deploy tab.
 
-Link your Github account
+Link your Github account.
 
-![Github Heroku](documentation/heroku_github.JPG)
+![Github Heroku](documentation/heroku_github.jpg)
 
 Go to settings and add buildpack.
 
 Add Python and Node.js in that order.
 
 
-![Buildpack Heroku](documentation/buildpack_heroku.JPG)
+![Buildpack Heroku](documentation/buildpack_heroku.jpg)
 
 Go to the Deploy tab and select deploy from branch.
 
 
 Wait for completion and click view.
 
-![Deploy from branch Heroku](documentation/heroke_deploy_2.JPG)
+![Deploy from branch Heroku](documentation/heroke_deploy_2.jpg)
 
 ## Credits
 Color formatting: [Colorama](https://pypi.org/project/colorama/)
