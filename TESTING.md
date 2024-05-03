@@ -10,14 +10,14 @@ No error were found.
 
 *   run.py
 
-![run.py](documentation/run.JPG)
+![run.py](documentation/run.jpg)
 
 *   hangman_visual.py
 
-![hangman visual](documentation/hangman_visual.JPG)
+![hangman visual](documentation/hangman_visual.jpg)
 
 *   words.py
-![words](documentation/words.JPG)
+![words](documentation/words.jpg)
 
 
 
